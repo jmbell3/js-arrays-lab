@@ -238,4 +238,63 @@ console.log('  buzz:', buzz);
 console.log('  fizzbuzz:', fizzbuzz);
 
 
+/*
+Exercise 13: Retrieve the Last Array
 
+1) Assign the last nested array in the `numArrays` below to a variable named
+   `numList`. As you do this, also fulfill these goals:
+
+   - Assume you don't know how many nested arrays `numArrays` contains.
+   - Do not alter the original `numArrays` array.
+
+Complete Exercise 13 in the space below:
+*/
+
+const numArrays = [
+	[100, 5, 23],
+	[15, 21, 72, 9],
+	[45, 66],
+	[7, 81, 90]
+];
+
+const numList = numArrays.length; // numArrays.length will be stored inside of numList and show the length of the array
+
+console.log('Exercise 13 result:', numList); 
+
+
+/*
+Exercise 14: Accessing within nested arrays
+
+1) Retrieve the number `66` from the `numArrays` array. As part of this process
+   do not alter the original `numArrays` array.
+
+2) Assign it to a variable called `num`.
+
+Complete Exercise 14 in the space below:
+*/
+
+const num = numArrays[2][1] // numArrays will be accessed and we can print the thirdrow or second index with the [2] and then we will acess the second index which is 66 by printing [1]
+
+
+console.log('Exercise 14 result:', num);
+
+/*
+Exercise 15: Nested array sum
+
+1) Use nested loops or `forEach()` methods to sum up all numbers within 
+   `numArrays` nested arrays.
+   
+2) Assign the sum to a variable called `total`.
+
+Hint: Be sure to declare and initialize the total variable before the iterations.
+
+Complete Exercise 15 in the space below:
+*/
+
+numArrays.forEach(element =>{   //for each loop with go through all the elements => will extract the elements
+   
+});
+
+const total = numArrays
+
+console.log('Exercise 15 result:\n', total);
