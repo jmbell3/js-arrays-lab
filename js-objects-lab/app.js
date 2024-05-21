@@ -32,7 +32,7 @@ catchPokemon(pokemonObj) {
     }
   }
 
-  ,gymStatus()  {
+  , gymStatus()  {
     const gymTally = { completed: 0, incomplete: 0 };
   
     this.gyms.forEach(gym => {
@@ -43,8 +43,14 @@ catchPokemon(pokemonObj) {
       }
     });
 }
-  
+ 
+, partyCount() {
+  return this.party.length; 
+
+}
 };
+
+
   
  
   //console.log(pokemon, { maxArrayLength: null })
@@ -181,7 +187,7 @@ console.log(game.party)
 
 console.log('Exercise 9')
 
-game.party.forEach((pokemon)=> {
+ game.party.forEach((pokemon)=> { //it will log the name of the pokemon that is inside of the game.party
   
   console.log(pokemon.name);
 })
@@ -224,8 +230,8 @@ Solve Exercise 11 here:
 
 console.log('Exercise 11')
 
-const arbok = pokemon.filter(p => p.name === "Arbok");
-game.catchPokemon(arbok);
+const arbok = pokemon.filter(p => p.name === "Arbok"); //this will filter through pokemon names and display the name arbok
+game.catchPokemon(arbok); // arbok will be stored inside of catch pokemon
 
 console.log('Catch Pokemon', game.party)
 
@@ -258,11 +264,11 @@ Solve Exercise 12 here:
   };*/
   console.log('Exercise 12')
 
-  const Mankey = pokemon.filter(p => p.name === "Mankey");
+  const Mankey = pokemon.filter(p => p.name === "Mankey"); //this will filter mankey from pokemon name.
   game.catchPokemon(Mankey);
 
-  console.log('Catch Pokemon', game.party)
-  console.log('Update Items', game.items)
+  console.log('Catch Pokemon', game.party) // catch pokemon is listed in the game section above
+  console.log('Update Items', game.items) // update items is listed in the game section above
 
   /*
 Exercise 13
@@ -273,9 +279,9 @@ Solve Exercise 13 here:
 */
 console.log('Exercise 13')
 
-game.gyms.forEach((gym) => { 
+game.gyms.forEach((gym) => {  // the for each will iterate through the game.games 
   
-  if (gym.difficulty < 6) {
+  if (gym.difficulty < 6) { // if gym.difficulty is less than six it will display true
    gym.completed = true;
   }
 })
@@ -305,6 +311,8 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 Solve Exercise 14 here:
 */
 
+
+// New method ceated for gym Status
 // gymStatus()  {
 //   const gymTally = { completed: 0, incomplete: 0 };
 
@@ -319,10 +327,52 @@ Solve Exercise 14 here:
 
 console.log ('Exercise 14');
 
-game.gymStatus();
+//game.gymStatus();
+
+/*
+Exercise 15
+1. Add a `partyCount` method to `game` that counts the number of Pokémon in your party.
+
+This method should:
+  - Not accept any arguments.
+  - Count the number of Pokemon in the party.
+  - return the found number of Pokemon in the party.
+
+Solve Exercise 15 here:
+*/
+console.log ('Exercise 15');
 
 
+console.log("Number of Pokémon in the party:", game.partyCount());
 
 
+/*
+Exercise 16
+1. Now, complete gyms with a difficulty below 8. Reflect on how this is similar to or different from the previous gym exercises.
+(change the value of `complete` in the qualifying objects from false to true).
+
+Solve Exercise 16 here:
+*/
+console.log('Exercise 16')
+
+game.gyms.forEach((gym) => {   // the for each will iterate through game.gyms
+  
+  if (gym.difficulty < 8) { // if game.difficulty is less than 8 it will change the value to true
+   gym.completed = true;
+  }
+})
 
 
+// This is very similar to the last exercises an only needs to have the number channed from 6 to 8
+console.log(game.gyms);
+
+/*
+Exercise 17
+1. Log the entire `game` object to the console. Take a moment to review the changes you've made throughout the exercises.
+
+
+Solve Exercise 17 here:
+*/
+
+console.log('Exercise 17');
+console.log(game);
