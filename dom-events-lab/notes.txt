@@ -1,0 +1,51 @@
+id - calculator (div.row x 4)
+    //rows -> buttons (div)
+        -> div.button -> .number (9)
+        // might need to use class.list contains (determine what I clicked)
+        // rows (4) -> number, operator, equals
+    
+// user stories
+
+//general goal
+As a user, I want to be able to select numbers so that I can perform operations with them.
+
+//features for an operation
+As a user, I want to be able to add two numbers together.
+
+//render function
+As a user, I want to be able to see the output of the mathematical operation.
+
+
+
+ice box
+// operation funcitons
+As a user, I want to be able to subtract one number from another.
+
+As a user, I want to be able to multiply two numbers together.
+
+As a user, I want to be able to divide one number by another.
+
+// Reset function
+As a user, I want to be able to clear all operations and start from 0.
+
+//calculator
+
+// constants ? complex data [] {} ?
+
+// variables (4 variables)
+    //tbd
+    num1 = number(button text)
+    num 2 = number(button text)
+    operator -, +, *, /
+    result = 3.14
+
+// dom elements -
+    buttons 
+        div.number
+        div.operator
+        div.equals
+    result - .display
+
+// event handler -
+    click handler for each group of elements
+    // fuctionality will be tied to its button
